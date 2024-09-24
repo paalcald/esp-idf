@@ -154,6 +154,8 @@ static void array_2_channel_bitmap(const uint8_t channel_list[], const uint8_t c
 /* Initialize Wi-Fi as sta and set scan method */
 static void wifi_scan(void)
 {
+    char* username = "paalcald";
+    ESP_LOGI(TAG, "Compilado en github por: ", username);
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     esp_netif_t *sta_netif = esp_netif_create_default_wifi_sta();
